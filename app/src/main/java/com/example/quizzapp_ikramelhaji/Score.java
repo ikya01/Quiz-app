@@ -24,7 +24,7 @@ public class Score extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
-        tvScore =(TextView) findViewById(R.id.tvScore);
+        tvScore =(TextView) findViewById(R.id.etscore);
         progressBar=(ProgressBar) findViewById(R.id.etprogress);
         bLogout=(Button) findViewById(R.id.bLogout);        bTry=(Button) findViewById(R.id.bTry);
         Intent intent=getIntent();
