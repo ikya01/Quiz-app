@@ -8,13 +8,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class score extends AppCompatActivity {
+public class Score extends AppCompatActivity {
 
 
     Button bLogout, bTry;
@@ -45,7 +41,7 @@ public class score extends AppCompatActivity {
         bTry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(score.this,Quiz1.class));
+                startActivity(new Intent(Score.this, Quiz.class));
             }
         });
 

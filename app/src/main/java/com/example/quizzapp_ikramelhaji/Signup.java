@@ -8,20 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class signup extends AppCompatActivity {
+public class Signup extends AppCompatActivity {
 
     EditText etMail, etPassword, etPassword1;
     Button bRegister;
@@ -72,13 +67,13 @@ public class signup extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
 
-                                    Toast.makeText(signup.this, "Account created.",
+                                    Toast.makeText(Signup.this, "Account created.",
                                             Toast.LENGTH_SHORT).show();
 
 
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    Toast.makeText(signup.this, "Authentication failed.",
+                                    Toast.makeText(Signup.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
 
                                 }
@@ -88,7 +83,7 @@ public class signup extends AppCompatActivity {
                 //Commen.login=Mail;
                 //Commen.password=password;
                 Toast.makeText(getApplicationContext(),"Registration Successful!  inscription réussi! التسجيل ناجح! 註冊成功  ",Toast.LENGTH_LONG).show();
-                startActivity(new Intent(signup.this,Signin.class));
+                startActivity(new Intent(Signup.this,Signin.class));
                 finish();
             }
 

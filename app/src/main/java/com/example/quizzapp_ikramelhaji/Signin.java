@@ -61,7 +61,7 @@ public class Signin extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Toast.makeText(Signin.this, "Login Successful.",
                                             Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Signin.this, Quiz1.class));
+                                    startActivity(new Intent(Signin.this, Quiz.class));
 
                                 } else {
                                     // If sign in fails, display a message to the user.
@@ -84,7 +84,7 @@ public class Signin extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("SigninActivity", "tvRegister clicked");
                 // Redirection vers l'activité d'inscription
-                Intent intent = new Intent(Signin.this, signup.class);
+                Intent intent = new Intent(Signin.this, Signup.class);
                 startActivity(intent);
             }
         });
