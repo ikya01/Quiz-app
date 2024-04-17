@@ -1,62 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Quiz"
-    android:orientation="vertical"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:gravity="center">
+    android:orientation="vertical">
+
+
     <TextView
+        android:id="@+id/nquiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz 1"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        />
+        android:layout_gravity="center_horizontal"
+        android:textSize="40dp" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <TextView
+        android:id="@+id/image1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A cette intersection, je laisse la priorité à droite :"
-        android:textSize="20sp"
-        android:layout_marginBottom="20sp"
-        android:textStyle="bold"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:id="@+id/q"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textSize="20dp" />
 
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rg">
+        android:id="@+id/choices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/rb1"
+            android:id="@+id/choice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Oui" />
+            />
 
         <RadioButton
-            android:id="@+id/rb2"
+            android:id="@+id/choice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Non" />
+            />
+
+
     </RadioGroup>
+
     <Button
-        android:id="@+id/bNext"
-        android:layout_width="match_parent"
+        android:id="@+id/bnext"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:layout_marginTop="20dp"/>
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="80dp"
-        android:src="@drawable/logoo"/>
+        android:layout_gravity="center_horizontal"
+        android:text="@string/next"
+        />
+
+
 
 </LinearLayout>

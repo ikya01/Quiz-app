@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Signin extends AppCompatActivity {
     // Déclaration des éléments de l'interface
@@ -25,7 +26,14 @@ public class Signin extends AppCompatActivity {
     TextView tvRegister;
     FirebaseAuth mAuth;
 
-    @SuppressLint("MissingInflatedId")
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            startActivity(new Intent(Signin.this,Quiz.class));
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +90,6 @@ public class Signin extends AppCompatActivity {
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("SigninActivity", "tvRegister clicked");
                 // Redirection vers l'activité d'inscription
                 Intent intent = new Intent(Signin.this, Signup.class);
                 startActivity(intent);

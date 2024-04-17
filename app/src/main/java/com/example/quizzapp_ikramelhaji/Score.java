@@ -23,9 +23,8 @@ public class Score extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
         tvScore =(TextView) findViewById(R.id.tvScore);
-        progressBar=(ProgressBar) findViewById(R.id.progressBar);
-        bLogout=(Button) findViewById(R.id.bLogout);
-        bTry=(Button) findViewById(R.id.bTry);
+        progressBar=(ProgressBar) findViewById(R.id.etprogress);
+        bLogout=(Button) findViewById(R.id.bLogout);        bTry=(Button) findViewById(R.id.bTry);
         Intent intent=getIntent();
         score=intent.getIntExtra("score",0) ;
         progressBar.setProgress(100*score/5);
