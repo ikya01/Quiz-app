@@ -90,7 +90,7 @@ public class Signup extends AppCompatActivity {
 
                 //Commen.login=Mail;
                 //Commen.password=password;
-                Toast.makeText(getApplicationContext(),"Registration Successful!  inscription réussi! التسجيل ناجح! 註冊成功  ",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Registration Successful !",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Signup.this,Signin.class));
                 finish();
             }

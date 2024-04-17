@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Score extends AppCompatActivity {
 
 
@@ -34,7 +36,8 @@ public class Score extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Merci de votre Participation !", Toast.LENGTH_SHORT).show();
-                finish();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Score.this, Quiz.class));
             }
         });
         bTry.setOnClickListener(new View.OnClickListener() {

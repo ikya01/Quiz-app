@@ -37,7 +37,7 @@ public class Quiz extends AppCompatActivity {
     private int currentQuestionIndex = 0;
     private int score = 0;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference questionsRef = db.collection("question");
+    private CollectionReference questionsRef = db.collection("Question");
     private List<Question> questions = new ArrayList<>();
 
 
